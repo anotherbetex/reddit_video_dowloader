@@ -55,4 +55,9 @@ else:
     ffmpeg.concat(input_video).output(f'{file_name}').global_args('-y').run(quiet=True)
     print('converted.')
 
+
+    print('Removing old files...')
+    os.remove('reddit_video.mp4')
+    print('Files removed.')
+
 print('Done')
